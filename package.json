@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-sqlite-project",
+  "version": "1.0.0",
+  "description": "A full-stack todo application that uses a NodeJS backend, a SQLite database, and a JWT Authentication system.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}

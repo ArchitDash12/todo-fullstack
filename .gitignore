@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+
+# Environment files and secrets
+.env
+.env.*.local
+
+# Logs and runtime files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.pid
+*.pid.lock
+*.seed
+
+# Test coverage and reports
+coverage/
+.nyc_output/
+
+# Build and generated output
+dist/
+dist-ssr/
+build/
+*.tsbuildinfo
+
+# SQLite databases
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Package manager and tool caches
+.npm/
+.eslintcache
+.parcel-cache/
+.vite/
+.turbo/
+
+# TypeScript and tooling
+typings/
+
+# Editor and operating system files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.user
+*.userossc
+*.njsproj
+*.sln
+*.swp
+*.swo
