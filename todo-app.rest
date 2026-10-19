@@ -18,3 +18,29 @@ Content-Type: application/json
     "username": "testeremail@gmail.com",
     "password": "123123"
 }
+
+### Fetch all todos for the authenticated user GET /TODOS (protected)
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkyNDQ5MzQyLCJleHAiOjE3OTI1MzU3NDJ9.wI9wYnDjzZl4l0abg8ZMvJWUfUFTvYtqsjkLG4YcLrU
+
+### Create a new todo for the authenticated user POST /TODOS (protected)
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkyNDQ5MzQyLCJleHAiOjE3OTI1MzU3NDJ9.wI9wYnDjzZl4l0abg8ZMvJWUfUFTvYtqsjkLG4YcLrU
+Content-Type: application/json
+
+{
+    "task": "Buy groceries"
+}
+
+### Update a todo for the authenticated user PUT /TODOS/:ID (protected)
+PUT http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkyNDQ5MzQyLCJleHAiOjE3OTI1MzU3NDJ9.wI9wYnDjzZl4l0abg8ZMvJWUfUFTvYtqsjkLG4YcLrU
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### Delete a todo for the authenticated user DELETE /TODOS/:ID (protected)
+DELETE http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzkyNDQ5MzQyLCJleHAiOjE3OTI1MzU3NDJ9.wI9wYnDjzZl4l0abg8ZMvJWUfUFTvYtqsjkLG4YcLrU
