@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-sqlite-project",
+  "name": "todo-fullstack",
   "version": "1.0.0",
-  "description": "A full-stack todo application that uses a NodeJS backend, a SQLite database, and a JWT Authentication system.",
+  "description": "A dockerized full-stack todo application that uses a NodeJS backend, a PostgreSQL database, a Prisma ORM, and a JWT Authentication system.",
   "main": "index.js",
   "type": "module",
   "scripts": {
