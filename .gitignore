@@ -3,7 +3,8 @@ node_modules/
 
 # Environment files and secrets
 .env
-.env.*.local
+.env.*
+!.env.example
 
 # Logs and runtime files
 logs/
@@ -26,6 +27,7 @@ dist/
 dist-ssr/
 build/
 *.tsbuildinfo
+prisma/generated/
 
 # SQLite databases
 *.db
