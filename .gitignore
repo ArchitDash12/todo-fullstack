@@ -5,6 +5,7 @@ node_modules/
 .env
 .env.*
 !.env.example
+.envrc
 
 # Logs and runtime files
 logs/
@@ -28,6 +29,7 @@ dist-ssr/
 build/
 *.tsbuildinfo
 prisma/generated/
+src/generated/
 
 # SQLite databases
 *.db
@@ -38,6 +40,9 @@ prisma/generated/
 
 # Package manager and tool caches
 .npm/
+.pnpm-store/
+.yarn/cache/
+*.tgz
 .eslintcache
 .parcel-cache/
 .vite/
@@ -50,6 +55,8 @@ typings/
 .vscode/*
 !.vscode/extensions.json
 .idea/
+.vercel/
+docker-compose.override.yml
 .DS_Store
 Thumbs.db
 *.suo

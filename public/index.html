@@ -190,7 +190,7 @@
         ) { return }
 
         // reset error and set isAuthenticating to true
-        error.style.display = 'none'
+        textError.style.display = 'none'
         isAuthenticating = true
         authBtn.innerText = 'Authenticating...'
 
@@ -204,6 +204,9 @@
                     body: JSON.stringify({ username: emailVal, password: passVal })
                 })
                 data = await response.json()
+                if (!response.ok) {
+                    throw Error(data.message || 'Failed to register')
+                }
             } else {
                 // login an account
                 const response = await fetch(apiBase + 'auth/login', {
@@ -212,6 +215,9 @@
                     body: JSON.stringify({ username: emailVal, password: passVal })
                 })
                 data = await response.json()
+                if (!response.ok) {
+                    throw Error(data.message || 'Failed to log in')
+                }
             }
 
             if (data.token) {
@@ -232,8 +238,8 @@
 
         } catch (err) {
             console.log(err.message)
-            error.innerText = err.message
-            error.style.display = 'block'
+            textError.innerText = err.message
+            textError.style.display = 'block'
         } finally {
             authBtn.innerText = 'Submit'
             isAuthenticating = false
